@@ -38,7 +38,7 @@ export const getService = async (url) => {
     const getStationInfo = async () => {
         if (stationInfoFeed) {
             try {
-                const response = await fetch(stationInfoFeed.url, options);
+                const response = await fetch(stationInfoFeed.url.replace('http:', 'https:'), options);
                 const stationInfo = await response.json();
                 return stationInfo;
             } catch (error) {
@@ -53,7 +53,7 @@ export const getService = async (url) => {
     const getStationStatus = async () => {
         if (stationStatusFeed) {
             try {
-                const response = await fetch(stationStatusFeed.url, options);
+                const response = await fetch(stationStatusFeed.url.replace('http:', 'https:'), options);
                 const stationStatus = await response.json();
                 return stationStatus;
             } catch (error) {
