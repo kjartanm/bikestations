@@ -53,6 +53,7 @@ export const getService = async (url) => {
     const getStationStatus = async () => {
         if (stationStatusFeed) {
             try {
+                console.log("url", stationStatusFeed.url.replace('http:', 'https:'));
                 const response = await fetch(stationStatusFeed.url.replace('http:', 'https:'), options);
                 const stationStatus = await response.json();
                 return stationStatus;

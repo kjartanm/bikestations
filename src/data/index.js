@@ -29,6 +29,6 @@ export const mergeStationData = ({ stationInfo, stationStatus, usePosition, curr
             return { ...station, num_bikes_available: -1, num_docks_available: -1, d  }
         }
     });
-    console.log(mergedStationData);
+    //console.log(mergedStationData);
     return !usePosition ? mergedStationData : mergedStationData.sort(sortDistance);
 }
