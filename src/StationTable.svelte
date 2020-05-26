@@ -18,7 +18,7 @@
 <div class="datatable datatable-useposition--{usePosition}">
     <div class="datahead datagrid">
         <div class="datacell datacell-useposition--{usePosition}">Km</div>
-        <div class="datacell">Name</div>
+        <div class="datacell">Station</div>
         <div class="datacell">Bikes <input type="checkbox" bind:checked={filterBikes}></div>
         <div class="datacell">Locks <input type="checkbox" bind:checked={filterDocks}></div>
     </div>
@@ -44,7 +44,8 @@
     .datahead {
         position: relative;
         width: 100%;
-        height: 45px;
+        height: 35px;
+        font-weight: 700;
     }
 
     .databody {
